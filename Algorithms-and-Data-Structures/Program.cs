@@ -13,8 +13,9 @@ namespace Algorithms_and_Data_Structures
             Console.WriteLine("Testing...");
             for(var i = 0; i <= 10; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(Algorithms.Square(i));
             }
+            Console.WriteLine(Algorithms.TestFunction());
             Console.ReadKey();
         }
     }
