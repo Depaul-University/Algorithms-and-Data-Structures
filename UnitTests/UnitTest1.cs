@@ -19,7 +19,6 @@ namespace UnitTests
 
             // assert
             Assert.AreEqual(expectedOutput, result);
-
         }
     }
 }

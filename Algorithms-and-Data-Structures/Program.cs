@@ -10,12 +10,7 @@ namespace Algorithms_and_Data_Structures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Testing...");
-            for(var i = 0; i <= 10; i++)
-            {
-                Console.WriteLine(Algorithms.Square(i));
-            }
-            Console.WriteLine(Algorithms.TestFunction());
+            Console.WriteLine("Please select an option:");
             Console.ReadKey();
         }
     }
