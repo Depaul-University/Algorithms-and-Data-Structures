@@ -10,8 +10,7 @@ namespace Algorithms_and_Data_Structures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please select an option:");
-            Console.ReadKey();
+            UserInterface.MainMenu();
         }
     }
 }
