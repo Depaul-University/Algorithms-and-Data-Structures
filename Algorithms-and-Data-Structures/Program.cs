@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Algorithms_and_Data_Structures
     {
         static void Main(string[] args)
         {
+            Algorithms.BubbleSort(Algorithms.randomIntArray(20));
             UserInterface.MainMenu();
         }
     }
