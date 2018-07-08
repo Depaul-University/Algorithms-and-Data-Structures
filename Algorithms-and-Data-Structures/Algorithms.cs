@@ -21,10 +21,49 @@ namespace Algorithms_and_Data_Structures
             return list;
         }
 
-
-        public static int Square(int n)
+        public static int[] BubbleSort()
         {
-            return n * n;
+            Console.Write("How long should our array be? ");
+            int[] list = Algorithms.randomIntArray(Int32.Parse(Console.ReadLine()));
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Original Random Integer Array");
+            Console.WriteLine("-------------------------------");
+            foreach ( var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine("\n-------------------------------");
+
+            foreach (var item in list)
+            {
+                for(var i = 0; i < list.Count() - 1; i++)
+                {
+                    if (list[i] > list[i + 1])
+                    {
+                        var temp = list[i];
+                        list[i] = list[i + 1];
+                        list[i + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Bubble Sorted Array");
+            Console.WriteLine("-------------------------------");
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine("\n-------------------------------");
+
+            return list;
+        }   
+
+        public static void Square()
+        {
+            Console.Write("Number you want squared? ");
+            int n = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Input squared = " + n * n);
         }
     }
 }

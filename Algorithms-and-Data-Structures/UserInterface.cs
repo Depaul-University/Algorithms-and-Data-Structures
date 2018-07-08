@@ -13,10 +13,9 @@ namespace Algorithms_and_Data_Structures
         {
             Console.WriteLine("Please select an option:");
             Console.WriteLine("-------------------------------");
-            Console.Write("1. Caesar's Cypher\n" +
+            Console.Write("1. Bubble Sort\n" +
                           "2. Vigenere's Cipher\n" +
                           "3. Number Squared\n");
-
             Console.WriteLine("-------------------------------");
             string choice = Console.ReadLine();
             Console.WriteLine("-------------------------------");
@@ -24,18 +23,13 @@ namespace Algorithms_and_Data_Structures
             switch (choice)
             {
                 case "1":
-                    //CaesarCipher();
+                    Algorithms.BubbleSort();
                     break;
                 case "2":
                     //VigenereCipher();
                     break;
                 case "3":
-                    Console.WriteLine("Number you want squared?");
-                    Console.WriteLine("-------------------------------");
-                    int n = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("-------------------------------");
-                    Console.WriteLine(Algorithms.Square(n));
-
+                    Algorithms.Square();
                     break;
                 case "exit":
                     Environment.Exit(0);
@@ -51,6 +45,8 @@ namespace Algorithms_and_Data_Structures
             Console.WriteLine("Return to menu? (Y) || Exit (X)");
             Console.WriteLine("-------------------------------");
             string userComplete = Console.ReadLine();
+            Console.WriteLine("-------------------------------");
+
             switch (userComplete)
             {
                 case "y":

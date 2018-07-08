@@ -9,17 +9,14 @@ namespace UnitTests
     public class UnitTest1
     {
         [TestMethod]
-        public void IsSquare()
+        public void ExampleFunction()
         {
             // arrange
-            int input = 8;
-            int expectedOutput = 8 * 8;
 
             // act
-            int result = Algorithms.Square(input);
 
             // assert
-            Assert.AreEqual(expectedOutput, result);
+
         }
     }
 }

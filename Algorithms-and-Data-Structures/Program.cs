@@ -11,7 +11,6 @@ namespace Algorithms_and_Data_Structures
     {
         static void Main(string[] args)
         {
-            Algorithms.BubbleSort(Algorithms.randomIntArray(20));
             UserInterface.MainMenu();
         }
     }
