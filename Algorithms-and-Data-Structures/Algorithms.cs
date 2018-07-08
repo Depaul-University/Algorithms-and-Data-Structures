@@ -36,14 +36,26 @@ namespace Algorithms_and_Data_Structures
 
             foreach (var item in list)
             {
+                var swapped = false;
                 for(var i = 0; i < list.Count() - 1; i++)
                 {
                     if (list[i] > list[i + 1])
                     {
+                        swapped = true;
                         var temp = list[i];
                         list[i] = list[i + 1];
                         list[i + 1] = temp;
                     }
+                }
+                Console.Write("Iteration(" + item + "): ");
+                foreach (var item2 in list)
+                {
+                    Console.Write(item2 + " ");
+                }
+                Console.WriteLine();
+                if ( swapped == false)
+                {
+                    break;
                 }
             }
             Console.WriteLine("-------------------------------");
@@ -56,7 +68,13 @@ namespace Algorithms_and_Data_Structures
             Console.WriteLine("\n-------------------------------");
 
             return list;
-        }   
+        }
+
+        public static int[] InsertionSort()
+        {
+            int[] list = Algorithms.randomIntArray(Int32.Parse(Console.ReadLine()));
+            return list;
+        }
 
         public static void Square()
         {
