@@ -14,7 +14,7 @@ namespace Algorithms_and_Data_Structures
             Console.WriteLine("Please select an option:");
             Console.WriteLine("-------------------------------");
             Console.Write("1. Bubble Sort\n" +
-                          "2. Vigenere's Cipher\n" +
+                          "2. Insertion Sort\n" +
                           "3. Number Squared\n");
             Console.WriteLine("-------------------------------");
             string choice = Console.ReadLine();
@@ -26,7 +26,7 @@ namespace Algorithms_and_Data_Structures
                     Algorithms.BubbleSort();
                     break;
                 case "2":
-                    //VigenereCipher();
+                    Algorithms.InsertionSort();
                     break;
                 case "3":
                     Algorithms.Square();
