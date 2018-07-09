@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,14 +27,14 @@ namespace Algorithms_and_Data_Structures
         {
             Console.Write("How long should our array be? ");
             int[] list = Algorithms.randomIntArray(Int32.Parse(Console.ReadLine()));
-            Console.WriteLine("-------------------------------");
-            Console.WriteLine("Original Random Integer Array");
-            Console.WriteLine("-------------------------------");
+
+            UserInterface.Header("Original Random Integer Array");
+
             foreach ( var item in list)
             {
                 Console.Write(item + " ");
             }
-            Console.WriteLine("\n-------------------------------");
+            Console.WriteLine("\n--------------------------------------------------------------");
 
             Timing timer = new Timing();
             timer.StartTime();
@@ -65,32 +66,33 @@ namespace Algorithms_and_Data_Structures
 
             timer.StopTime();
 
-            Console.WriteLine("-------------------------------");
-            Console.WriteLine("Bubble Sorted Array(" + timer.Result() + "s)");
-            Console.WriteLine("-------------------------------");
+            UserInterface.Header("Bubble Sorted Array(" + timer.Result() + "s)");
+
             foreach (var item in list)
             {
                 Console.Write(item + " ");
             }
-            Console.WriteLine("\n-------------------------------");
-            Console.WriteLine("Bubble Sort completed in: " + timer.Result() + "s");
-            Console.WriteLine("-------------------------------");
+            Console.WriteLine();
+
+            UserInterface.Header("Bubble Sort completed in: " + timer.Result() + "s");
 
             return list;
         }
 
-        public static int[] InsertionSort()
+        public static int[] InsertionSort([Optional]int[] list)
         {
-            Console.Write("How long should our array be? ");
-            int[] list = Algorithms.randomIntArray(Int32.Parse(Console.ReadLine()));
-            Console.WriteLine("-------------------------------");
-            Console.WriteLine("Original Random Integer Array");
-            Console.WriteLine("-------------------------------");
+            if(list == null)
+            {
+                Console.Write("How long should our array be? ");
+                list = Algorithms.randomIntArray(Int32.Parse(Console.ReadLine()));
+                UserInterface.Header("Original Random Integer Array");
+            }
+
             foreach (var item in list)
             {
                 Console.Write(item + " ");
             }
-            Console.WriteLine("\n-------------------------------");
+            Console.WriteLine("\n--------------------------------------------------------------");
 
             Timing timer = new Timing();
             timer.StartTime();
@@ -109,16 +111,15 @@ namespace Algorithms_and_Data_Structures
 
             timer.StopTime();
 
-            Console.WriteLine("-------------------------------");
-            Console.WriteLine("Insertion Sorted Array: ("+ timer.Result() + "s)");
-            Console.WriteLine("-------------------------------");
+            UserInterface.Header("Insertion Sorted Array: ("+ timer.Result() + "s)");
+            
             foreach (var item in list)
             {
                 Console.Write(item + " ");
             }
-            Console.WriteLine("\n-------------------------------");
-            Console.WriteLine("Insertion Sort completed in: " + timer.Result() + "s)");
-            Console.WriteLine("-------------------------------");
+            Console.WriteLine();
+
+            UserInterface.Header("Insertion Sort completed in: " + timer.Result() + "s)");
 
             return list;
         }
@@ -127,7 +128,7 @@ namespace Algorithms_and_Data_Structures
         {
             Console.Write("Number you want squared? ");
             int n = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("-------------------------------");
+            Console.WriteLine("--------------------------------------------------------------");
             Console.WriteLine("Input squared = " + n * n);
         }
     }

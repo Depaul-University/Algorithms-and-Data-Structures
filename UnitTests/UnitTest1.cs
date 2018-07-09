@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Algorithms_and_Data_Structures;
 using System.IO;
+using System.Diagnostics;
 
 namespace UnitTests
 {
@@ -9,7 +10,7 @@ namespace UnitTests
     public class UnitTest1
     {
         [TestMethod]
-        public void ExampleFunction()
+        public void Example()
         {
             // arrange
 
