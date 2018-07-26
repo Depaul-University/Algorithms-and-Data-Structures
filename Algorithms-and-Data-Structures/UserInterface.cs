@@ -16,6 +16,7 @@ namespace Algorithms_and_Data_Structures
             Console.Write("1. Bubble Sort\n" +
                           "2. Insertion Sort\n" +
                           "3. Binary Search\n" +
+                          "4. Caesar Cypher\n" +
                           "99. Number Squared\n");
             Console.WriteLine("--------------------------------------------------------------");
             string choice = Console.ReadLine();
@@ -31,6 +32,9 @@ namespace Algorithms_and_Data_Structures
                     break;
                 case "3":
                     Algorithms.BinarySearch();
+                    break;
+                case "4":
+                    Algorithms.CaesarCipher();
                     break;
                 case "99":
                     Algorithms.Square();

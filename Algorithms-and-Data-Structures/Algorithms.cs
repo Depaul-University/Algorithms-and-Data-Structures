@@ -181,5 +181,48 @@ namespace Algorithms_and_Data_Structures
             Console.WriteLine("--------------------------------------------------------------");
             Console.WriteLine("Input squared = " + n * n);
         }
+
+
+        public static string CaesarCipher([Optional]string input, [Optional]int key)
+        {
+            if(string.IsNullOrEmpty(input))
+            {
+                Console.WriteLine("What string would you like to Cypher?");
+                input = Console.ReadLine();
+            }
+            if (key == 0)
+            {
+                Console.WriteLine("What is your Cypher Key?");
+                key = Int32.Parse(Console.ReadLine());
+            }
+
+            //turn string into array
+            char[] newInput = input.ToCharArray();
+
+            //loop through array
+            for (var i = 0; i < newInput.Length; i++)
+            {
+                // zero out each array value then add value of key, and then MOD by 65, then reverse zeroing out
+                Console.WriteLine("Original Char: " + newInput[i]);
+                if (char.IsLetter(newInput[i]))
+                {
+                    if (char.IsLower(newInput[i]))
+                    {
+                        newInput[i] = Convert.ToChar((((newInput[i] - 97) + key) % 26) + 97);
+                    }
+                    if (char.IsUpper(newInput[i]))
+                    {
+                        newInput[i] = Convert.ToChar((((newInput[i] - 65) + key) % 26) + 65);
+                    }
+                }
+                Console.WriteLine("New Char     : " + newInput[i]);
+            }
+
+            // turn array back into string
+            string output = new string(newInput);
+
+            Console.WriteLine(output);
+            return output;
+        }
     }
 }
